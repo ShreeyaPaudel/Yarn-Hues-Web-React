@@ -1,0 +1,100 @@
+/* Your existing CSS code */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("homepageBackground.png.jpg");
+    opacity: 0.9;
+    width: 100%;
+    background-size: cover;
+    background-position: absolute;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 15px;
+    height: 39px;
+    width: 43px;
+    background-image: url("Logo.png");
+    background-blend-mode: overlay;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(120, 39, 39);
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+form input {
+    max-width: fit-content;
+    padding: 4px;
+    margin: 5px 0;
+    border: 1px solid rgb(128, 84, 84);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btnL {
+    margin: 10px auto;
+    padding: 3px 20px;
+    background-color: rgb(120, 39, 39);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: rgb(120, 39, 39);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    margin: 5px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+    white-space: nowrap;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        width: 60%;
+    }
+}

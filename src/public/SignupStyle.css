@@ -1,0 +1,94 @@
+/* SignupStyle.css */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../assets/homepageBackground.png.jpg");
+    width: 100%;
+    opacity: 0.9;
+    background-size: cover;
+    background-position: absolute;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    position: absolute;
+    left: 15px;
+    height: 39px;
+    width: 43px;
+    background-image: url("../assets/Logo.png");
+    background-blend-mode: overlay;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(120, 39, 39);
+    margin-top: 45px;
+    margin-left: 165px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+form input {
+    max-width: fit-content;
+    padding: 4px;
+    margin: 5px 0;
+    border: 1px solid rgb(128, 84, 84);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    margin: 10px auto;
+    padding: 3px 20px;
+    background-color: rgb(120, 39, 39);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+}
+
+a {
+    color: rgb(120, 39, 39);
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+    margin-left: 45px;
+    white-space: nowrap;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        width: 60%;
+    }
+}
