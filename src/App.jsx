@@ -13,6 +13,7 @@ function App() {
   const Dashboard = React.lazy(() => import ("./private/Dashboard"));
   const EditProfile = React.lazy(() => import("./private/EditProfile"));
   const Designs = React.lazy (() => import ("./private/Designs"));
+  const MainPage = React.lazy (() => import ("./public/MainPage"));
 
  
   return (
