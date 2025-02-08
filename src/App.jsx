@@ -10,6 +10,10 @@ function App() {
 
   const Login = React.lazy(() => import("./public/Login"));
   const Signup = React.lazy(() => import("./public/SignUp"));
+  const Dashboard = React.lazy(() => import ("./private/Dashboard"));
+  const EditProfile = React.lazy(() => import("./private/EditProfile"));
+  const Designs = React.lazy (() => import ("./private/Designs"));
+
  
   return (
     <Router>
@@ -18,6 +22,9 @@ function App() {
        <Route path='/' element={<Navigate to ="/login"/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
+        <Route path = '/dashboard'element={<Dashboard/>}></Route>
+        <Route path = '/editprofile' element ={<EditProfile/>}></Route>
+        <Route path = '/designs'element ={<Designs/>}></Route>
         
        </Routes>
       </Suspense>

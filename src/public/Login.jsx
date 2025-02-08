@@ -8,6 +8,7 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        
         // Retrieve stored values from localStorage
         const storedEmail = localStorage.getItem("storedEmail");
         const storedPassword = localStorage.getItem("storedPassword");

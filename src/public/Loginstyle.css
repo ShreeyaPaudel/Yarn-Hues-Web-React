@@ -1,4 +1,4 @@
-/* Your existing CSS code */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: url("homepageBackground.png.jpg");
+    background-image: url("../assets/homepageBackground.png.jpg");
     opacity: 0.9;
     width: 100%;
     background-size: cover;
@@ -24,7 +24,7 @@ body {
     left: 15px;
     height: 39px;
     width: 43px;
-    background-image: url("Logo.png");
+    background-image: url("../assets/Logo.png");
     background-blend-mode: overlay;
     border-radius: 50%;
     background-size: contain;
