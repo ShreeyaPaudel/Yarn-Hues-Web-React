@@ -26,6 +26,7 @@ function App() {
         <Route path = '/dashboard'element={<Dashboard/>}></Route>
         <Route path = '/editprofile' element ={<EditProfile/>}></Route>
         <Route path = '/designs'element ={<Designs/>}></Route>
+        <Route></Route>
         
        </Routes>
       </Suspense>
