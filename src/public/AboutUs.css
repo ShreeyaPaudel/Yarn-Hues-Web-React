@@ -1,0 +1,173 @@
+/* General Page Styles */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    color: #512313;
+    background-color: #f9f5f2;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("../assets/hero-background.jpg"); /* Replace with actual background */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    background-color: rgba(81, 19, 19, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 36px;
+}
+
+.hero-overlay p {
+    font-size: 18px;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #fff5f2;
+    padding: 40px 10%;
+}
+
+.feature {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.feature h3 {
+    color: #8a3c3c;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Additional Info */
+.additional-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+}
+
+.info-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.info-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-images {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+
+.info-images img {
+    width: 48%;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.learn-more-btn {
+    background-color: #8a3c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #512313;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-content,
+    .additional-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content,
+    .info-text {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .features-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .info-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-images img {
+        width: 100%;
+    }
+}
