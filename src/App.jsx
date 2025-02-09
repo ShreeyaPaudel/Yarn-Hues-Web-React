@@ -14,6 +14,7 @@ function App() {
   const EditProfile = React.lazy(() => import("./private/EditProfile"));
   const Designs = React.lazy (() => import ("./private/Designs"));
   const MainPage = React.lazy (() => import ("./public/MainPage"));
+  const AboutUS = React.lazy (() => import ("./public/AboutUs"));
 
  
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path = '/editprofile' element ={<EditProfile/>}></Route>
         <Route path = '/designs'element ={<Designs/>}></Route>
         <Route path = '/mainpage' element ={<MainPage/>}></Route>
+        <Route></Route>
         
        </Routes>
       </Suspense>
