@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: rgb(81, 19, 19);
+    background-color: rgb(34, 3, 3);
     opacity: 0.9;
     color: white;
     position: fixed;
@@ -21,7 +21,7 @@ body {
     height: 60px;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgb(81, 19, 19);
+    box-shadow: 0 2px 8px rgb(57, 5, 5);
 }
 
 .logo img {

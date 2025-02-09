@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./MainPage.css"; 
-import logo from src/assests/logo.png;
+
 
 const AuthPage = () => {
   return (
