@@ -20,7 +20,7 @@ function App() {
     <Router>
     <Suspense fallback={<div>loading..</div>}>
        <Routes>
-       <Route path='/' element={<Navigate to ="/login"/>}></Route>
+       <Route path='/' element={<Navigate to ="/mainpage"/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path = '/dashboard'element={<Dashboard/>}></Route>

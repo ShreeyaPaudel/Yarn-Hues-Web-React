@@ -1,25 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./AuthPage.css"; // Import the CSS file
+import "./MainPage.css"; 
+import logo from src/assests/logo.png;
 
 const AuthPage = () => {
   return (
     <div className="auth-container">
-      {/* Navbar */}
+      
       <nav className="navbar">
         <div className="logo">
-          <img src="../assets/logo.png" alt="Logo" />
+          <img src="logo" alt="Logo" />
         </div>
         <div className="navbar-items">
-          <button className="text-btn">Home</button>
-          <button className="text-btn">About</button>
+          
+          <button className="text-btn">About Us</button>
           <button className="text-btn">Contact</button>
         </div>
       </nav>
 
-      {/* Auth Section */}
+      
       <div className="auth-section">
-        <h1>Welcome</h1>
+        <h1>Welcome to Yarn Hues!</h1>
         <div className="auth-buttons">
           <Link to="/login">
             <button className="auth-btn login-btn">Login</button>

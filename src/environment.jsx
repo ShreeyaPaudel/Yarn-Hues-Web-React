@@ -1,3 +1,4 @@
-// export enum API(
-//     BASE_URL = "http://localhost:5173/login",
-// );
+export const API ={
+    BASE_URL : "http://localhost:4000"
+};
+    
