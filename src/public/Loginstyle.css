@@ -1,100 +1,176 @@
-
+/* General Page Styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
-}
-
-.main {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../assets/homepageBackground.png.jpg");
-    opacity: 0.9;
-    width: 100%;
-    background-size: cover;
-    background-position: absolute;
-    background-attachment: fixed;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-image: url("../assets/homepageBackground.png.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.logo {
-    position: absolute;
-    left: 15px;
-    height: 39px;
-    width: 43px;
-    background-image: url("../assets/Logo.png");
-    background-blend-mode: overlay;
-    border-radius: 50%;
-    background-size: contain;
-}
-
-.content {
+/* Main Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 600px;
-    flex: 1;
-    padding: 10px;
+    height: 100vh;
+}
+
+/* Centered Login Container */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(230, 224, 202, 0.9);
+    padding: 30px;
     border-radius: 10px;
-    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Logo Styling */
+.logo {
+    margin-top: 0px;
+    height: 45px;
+    width: 45px;
+    background-image: url("../assets/Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+/* Form Container */
+.form-container {
+    text-align: center;
+}
+
+/* Heading */
 h3 {
     color: rgb(120, 39, 39);
-    margin-top: 10px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 24px;
-    text-align: left;
-    white-space: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    /* margin-bottom: 20px; */
+    margin-top: 0px;
 }
 
+/* Input Fields */
 form input {
-    max-width: fit-content;
-    padding: 4px;
-    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
     border: 1px solid rgb(128, 84, 84);
-    background-color: transparent;
     border-radius: 5px;
     font-size: 16px;
+    background-color: transparent;
 }
 
+/* Login Button */
 .btnL {
-    margin: 10px auto;
-    padding: 3px 20px;
+    width: fit-content;
+    padding: 10px;
     background-color: rgb(120, 39, 39);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.btnL:hover {
+    background-color: rgb(90, 30, 30);
+}
+
+/* Links */
 a {
     color: rgb(120, 39, 39);
+    text-decoration: none;
+    font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph Styling */
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures everything inside the form is centered */
+    width: 100%;
+}
+
+form input {
+    width: 90%; /* Adjust width to make it fit nicely */
+    max-width: 300px; /* Prevent it from being too wide */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #8b5e5e;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left; /* Align text properly */
+}
+
+.content {
+    width: 90%;
+    max-width: 300px; /* Same as signup */
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 20px; /* Same as signup */
+    margin-bottom: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 6px; /* Match signup form */
+    margin: 6px 0; /* Ensure equal spacing */
+    border: 1px solid rgb(128, 84, 84);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input::placeholder {
+    font-size: 12px; /* Match signup */
+    color: rgb(100, 100, 100);
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 6px 15px; /* Same button size as signup */
+    font-size: 14px;
 }
 
 p {
-    margin: 5px 0;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: smaller;
-    white-space: nowrap;
-    margin-left: 20px;
-    text-align: left;
+    font-size: 13px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .content {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 1200px) {
-    .content {
-        width: 60%;
-    }
-}

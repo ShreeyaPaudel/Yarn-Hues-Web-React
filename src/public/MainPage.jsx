@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MainPage.css"; 
+import "./MainPage.css";
+import yarnImage from "../assets/mainpagebg1.jpg"; // Ensure you have an aesthetic yarn image
 
 
 const AuthPage = () => {
@@ -12,13 +13,15 @@ const AuthPage = () => {
           <img src="logo" alt="Logo" />
         </div>
         <div className="navbar-items">
-          
           <button className="text-btn">About Us</button>
           <button className="text-btn">Contact</button>
         </div>
       </nav>
 
-      
+      <div className="background-container">
+        <img src={yarnImage} alt="Yarn Aesthetic" className="animated-bg" />
+      </div>
+
       <div className="auth-section">
         <h1>Welcome to Yarn Hues!</h1>
         <div className="auth-buttons">
