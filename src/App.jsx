@@ -28,7 +28,7 @@ function App() {
         <Route path = '/editprofile' element ={<EditProfile/>}></Route>
         <Route path = '/designs'element ={<Designs/>}></Route>
         <Route path = '/mainpage' element ={<MainPage/>}></Route>
-        <Route path = '/aboutus' element = {<MainPage/>}></Route>
+        <Route path = '/aboutus' element = {<AboutUS/>}></Route>
         
        </Routes>
       </Suspense>

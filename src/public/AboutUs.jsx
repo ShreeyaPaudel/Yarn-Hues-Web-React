@@ -1,8 +1,8 @@
 import React from "react";
 import "./AboutUs.css"; // Import the CSS file
-import yarnImage1 from "../assets/yarn1.jpg"; // Replace with actual image paths
-import yarnImage2 from "../assets/yarn2.jpg";
-import yarnImage3 from "../assets/yarn3.jpg";
+import yarnImage1 from "../assets/redgreenyarn.jpg"; // Replace with actual image paths
+import yarnImage2 from "../assets/bluryarn.jpg";
+import yarnImage3 from "../assets/mainpagebg.jpg";
 
 const AboutUs = () => {
   return (

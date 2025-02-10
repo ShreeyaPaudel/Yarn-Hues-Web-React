@@ -1,6 +1,6 @@
 /* General Page Styles */
 .about-container {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #512313;
     background-color: #f9f5f2;
 }
@@ -30,6 +30,8 @@
 
 .hero-overlay p {
     font-size: 18px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* About Content */
@@ -43,6 +45,7 @@
 .text-content {
     flex: 1;
     padding-right: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .text-content h2 {
@@ -72,6 +75,7 @@
     text-align: center;
     background-color: #fff5f2;
     padding: 40px 10%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .feature {
@@ -94,6 +98,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 50px 10%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .info-text {
@@ -132,6 +137,7 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .learn-more-btn:hover {
