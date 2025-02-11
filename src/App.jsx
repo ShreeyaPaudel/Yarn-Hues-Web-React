@@ -15,6 +15,7 @@ function App() {
   const Designs = React.lazy (() => import ("./private/Designs"));
   const MainPage = React.lazy (() => import ("./public/MainPage"));
   const AboutUS = React.lazy (() => import ("./public/AboutUs"));
+  const ContactUS = React.lazy (() => import ("./public/ContactUs"));
 
  
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path = '/designs'element ={<Designs/>}></Route>
         <Route path = '/mainpage' element ={<MainPage/>}></Route>
         <Route path = '/aboutus' element = {<AboutUS/>}></Route>
+        <Route path = '/contactus' element = {<ContactUS/>}></Route>
         
        </Routes>
       </Suspense>

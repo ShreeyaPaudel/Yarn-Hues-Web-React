@@ -3,25 +3,9 @@ import { Link } from "react-router-dom";
 import "./MainPage.css";
 import yarnImage from "../assets/mainpagebg1.jpg"; // Ensure you have an aesthetic yarn image
 
-
-const AuthPage = () => {
+const MainPage = () => {
   return (
     <div className="auth-container">
-      
-      <nav className="navbar">
-        <div className="logo">
-          <img src="logo" alt="Logo" />
-        </div>
-        <div className="navbar-items">
-          <button className="text-btn">About Us</button>
-          <button className="text-btn">Contact</button>
-        </div>
-      </nav>
-
-      <div className="background-container">
-        <img src={yarnImage} alt="Yarn Aesthetic" className="animated-bg" />
-      </div>
-
       <div className="auth-section">
         <h1>Welcome to Yarn Hues!</h1>
         <div className="auth-buttons">
@@ -33,8 +17,21 @@ const AuthPage = () => {
           </Link>
         </div>
       </div>
+
+      <div className="bottom-right-buttons">
+        <Link to="/aboutus">
+          <button className="bottom-btn">About Us</button>
+        </Link>
+        <Link to="/contactus">
+          <button className="bottom-btn">Contact</button>
+        </Link>
+      </div>
+      
+      <div className="background-container">
+        <img src={yarnImage} alt="Yarn Aesthetic" className="animated-bg" />
+      </div>
     </div>
   );
 };
 
-export default AuthPage;
+export default MainPage;

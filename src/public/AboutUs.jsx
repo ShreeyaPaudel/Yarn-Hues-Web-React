@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./AboutUs.css"; // Import the CSS file
 import yarnImage1 from "../assets/redgreenyarn.jpg"; // Replace with actual image paths
 import yarnImage2 from "../assets/bluryarn.jpg";
@@ -31,7 +32,9 @@ const AboutUs = () => {
             intuitive online platform and vibrant color themes, shopping for yarn
             has never been easier!
           </p>
-          <button className="learn-more-btn">Discover More</button>
+          <Link to="/contact-us">
+            <button className="learn-more-btn">Discover More</button>
+          </Link>
         </div>
         <div className="image-content">
           <img src={yarnImage1} alt="Yarn Hues Collection" />
@@ -63,7 +66,9 @@ const AboutUs = () => {
             Our handpicked collections ensure durability, softness, and a variety of
             color palettes that inspire creativity.
           </p>
-          <button className="learn-more-btn">Get in Touch</button>
+          <Link to="/contactus">
+            <button className="learn-more-btn">Get in Touch</button>
+          </Link>
         </div>
         <div className="info-images">
           <img src={yarnImage2} alt="Colorful Yarn" />
