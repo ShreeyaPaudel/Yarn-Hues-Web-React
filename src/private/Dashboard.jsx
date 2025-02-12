@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../style/Dashboard.css"
+import "../style/Dashboard.css";
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -12,18 +12,32 @@ const Dashboard = () => {
                 <div className="logo">
                     <img src="../assets/Logo.png" alt="Logo" />
                 </div>
-                <div className="navbar-items">
+                <nav className="navbar-items">
                     <button className="text-btn" onClick={() => alert("No new notifications!")}>Notifications</button>
                     <button className="text-btn" onClick={() => alert("Settings page coming soon!")}>Settings</button>
-                    <button className="text-btn" onClick={() => alert("About Us coming soon!")}>About Us</button>
-                </div>
+                    <button className="text-btn" onClick={() => navigate("/about")}>About Us</button>
+                </nav>
             </header>
 
-            {/* Main Dashboard Content */}
+            {/* Hero Section */}
+            <section className="hero-section">
+                <h1>Exclusive Discounts on Yarn Collections</h1>
+                <p>Get up to 50% off on our premium hand-crafted yarns.</p>
+                <button className="shop-now-btn">Shop Now</button>
+            </section>
+
+            {/* Featured Categories */}
             <main className="dashboard">
-                <div className="button-container">
-                    <button className="action-btn" onClick={() => navigate("/designs")}>Designs</button>
-                    <button className="profile-btn" onClick={() => navigate("/profile")}>Profile</button>
+                <h2 className="section-title">New Arrivals</h2>
+                <div className="category-container">
+                    <div className="category-card" onClick={() => navigate("/designs")}>
+                        <img src="../assets/designsBtnpic.jpg" alt="Designs" />
+                        <p>Explore Designs</p>
+                    </div>
+                    <div className="category-card" onClick={() => navigate("/profile")}>
+                        <img src="../assets/profileBtnpic.jpg" alt="Profile" />
+                        <p>My Profile</p>
+                    </div>
                 </div>
             </main>
 

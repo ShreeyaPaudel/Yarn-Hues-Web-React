@@ -11,42 +11,38 @@ const ContactUs = () => {
         </div>
       </section>
 
-      
-      <section className="get-in-touch">
-        <h2>We’d Love to Hear From You!</h2>
-        <p>Whether you have questions or feedback, feel free to reach out.</p>
-        <div className="contact-details">
-          <div className="contact-item">
-            <i className="fas fa-phone-alt"></i>
-            <span>+977 9813780846</span>
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-envelope"></i>
-            <span>shreeya.paudel.8e@gmail.com</span>
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-clock"></i>
-            <span>Monday - Friday, 9 AM - 6 PM</span>
-          </div>
-        </div>
+      {/* Google Maps Section */}
+      <section className="google-maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d385.0464507209972!2d85.29853642998637!3d27.65827446315121!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2snp!4v1739275163961!5m2!1sen!2snp" 
+      width="600" 
+      height="450" 
+      style={{border:0}} 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       </section>
-
-     
-      {/* <section className="contact-form">
-        <h2>Send Us a Message</h2>
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="tel" placeholder="Phone" />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </section> */}
-
-
 
       {/* Footer */}
       <footer className="footer">
+        <div className="get-in-touch">
+          <h2>We’d Love to Hear From You!</h2>
+          <p>Whether you have questions or feedback, feel free to reach out.</p>
+          <div className="contact-details">
+            <div className="contact-item">
+              <i className="fas fa-phone-alt"></i>
+              <span>+977 9813780846</span>
+            </div>
+            <div className="contact-item">
+              <i className="fas fa-envelope"></i>
+              <span>shreeya.paudel.8e@gmail.com</span>
+            </div>
+            <div className="contact-item">
+              <i className="fas fa-clock"></i>
+              <span>Monday - Friday, 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
         <div className="social-links">
           <a href="https://www.instagram.com/yarnhues" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
