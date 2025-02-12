@@ -1,57 +1,69 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/Dashboard.css";
+import gallery1 from "../assets/earwarmerpurple.jpg";
+import gallery2 from "../assets/Poncho.jpg";
+import gallery3 from "../assets/hat.jpeg";
+import gallery4 from "../assets/BabyHeadband.jpg";
+import Logo from "../assets/Logo.png";
+import collage from "../assets/collage.png";
+import yarnshop from "../assets/yarnshop.jpg"
+
+
 
 const Dashboard = () => {
-    const navigate = useNavigate();
-
     return (
         <div className="dashboard-container">
             {/* Navbar */}
             <header className="navbar">
                 <div className="logo">
-                    <img src="../assets/Logo.png" alt="Logo" />
+                    <img src={Logo} alt="Logo" />
                 </div>
-                <nav className="navbar-items">
-                    <button className="text-btn" onClick={() => alert("No new notifications!")}>Notifications</button>
-                    <button className="text-btn" onClick={() => alert("Settings page coming soon!")}>Settings</button>
-                    <button className="text-btn" onClick={() => navigate("/about")}>About Us</button>
+                <nav className="nav-links">
+                    <Link to="/">Home</Link>
+                    <Link to="/shop">Shop</Link>
+                    <Link to="/aboutus">About</Link>
+                    <Link to="/contactus">Contact</Link>
                 </nav>
             </header>
 
             {/* Hero Section */}
             <section className="hero-section">
-                <h1>Exclusive Discounts on Yarn Collections</h1>
-                <p>Get up to 50% off on our premium hand-crafted yarns.</p>
-                <button className="shop-now-btn">Shop Now</button>
+                <h1>New Arrivals</h1>
+                <p>Discover our latest collections</p>
+                <Link to="/designs">
+                    <button>Shop Now</button>
+                </Link>
+               
             </section>
 
-            {/* Featured Categories */}
-            <main className="dashboard">
-                <h2 className="section-title">New Arrivals</h2>
-                <div className="category-container">
-                    <div className="category-card" onClick={() => navigate("/designs")}>
-                        <img src="../assets/designsBtnpic.jpg" alt="Designs" />
-                        <p>Explore Designs</p>
-                    </div>
-                    <div className="category-card" onClick={() => navigate("/profile")}>
-                        <img src="../assets/profileBtnpic.jpg" alt="Profile" />
-                        <p>My Profile</p>
-                    </div>
+            {/* Collections */}
+            <section className="collections">
+            <Link to="/designs">
+                <div className="collection-card">
+                    <img src={collage} alt="New Collection" />
+                    <h3>New Collections</h3>
                 </div>
-            </main>
+            </Link>
+
+            </section>
+
+            {/* Gallery */}
+            <section className="gallery">
+                <img src={gallery1} alt="Gallery Image 1" />
+                <img src={gallery2} alt="Gallery Image 2" />
+                <img src={gallery3} alt="Gallery Image 3" />
+                <img src={gallery4} alt="Gallery Image 4" />
+            </section>
+
+            {/* Shopify Theme */}
+            <section className="shopify-theme">
+                <img src={yarnshop} alt="Shopify Theme Preview" />
+            </section>
 
             {/* Footer */}
             <footer className="footer">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:yarnhues12@gmail.com">yarnhues12@gmail.com</a></p>
-                <p>Phone: <a href="tel:+9779841821787">+977 9841821787</a></p>
-                <p>Location: Lalitpur</p>
-                <div className="social-icons">
-                    <a href="#">Facebook</a> | 
-                    <a href="#">Tiktok</a> | 
-                    <a href="#">Instagram</a>
-                </div>
+                <p>&copy; 2025 Yarn Hues. All Rights Reserved.</p>
             </footer>
         </div>
     );

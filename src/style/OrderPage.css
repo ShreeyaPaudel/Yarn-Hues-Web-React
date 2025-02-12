@@ -1,0 +1,33 @@
+.order-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.order-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.order-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
