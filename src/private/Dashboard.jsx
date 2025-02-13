@@ -21,7 +21,7 @@ const Dashboard = () => {
                 </div>
                 <nav className="nav-links">
                     <Link to="/">Home</Link>
-                    <Link to="/shop">Shop</Link>
+                    <Link to="/designs">Shop</Link>
                     <Link to="/aboutus">About</Link>
                     <Link to="/contactus">Contact</Link>
                 </nav>
