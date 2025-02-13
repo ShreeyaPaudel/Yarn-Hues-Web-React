@@ -24,6 +24,8 @@ const Order = () => {
     const [description, setDescription] = useState("");
     const [orderDate, setOrderDate] = useState("");
     const [favorite, setFavorite] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
+
 
     return (
         <div className="order-container">
@@ -57,8 +59,24 @@ const Order = () => {
                 <div className="order-buttons">
                     <button className="cart-btn" onClick={() => alert("Added to Cart!")}>Add to Cart</button>
                     <button className="fav-btn" onClick={() => setFavorite(!favorite)}>{favorite ? "❤️ Favorited" : "♡ Add to Favorites"}</button>
+                    <button className="checkout-btn" onClick={() => navigate("/checkout", { state: { design, color, size, measurements, description, orderDate } })}>
+                        Checkout
+                    </button>
                 </div>
             </div>
+
+            {/* Settings Button */}
+            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>⚙ Settings</button>
+            {showSettings && (
+                <div className="settings-menu">
+                    <ul>
+                        <li><a href="/cart">View Cart</a></li>
+                        <li><a href="/orders">Order History</a></li>
+                        <li><a href="/favorites">Favorites</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            )}
 
             <footer className="footer">
                 <p>&copy; 2025 Yarn Hues. All Rights Reserved.</p>
