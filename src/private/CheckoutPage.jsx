@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../style/Checkout.css";
+import "../style/CheckoutPage.css";
 
 const Checkout = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { design, color, size, measurements, description, orderDate } = location.state || {};
+    const orderData = location.state;
+
+if (!orderData) {
+    return (
+        <div className="checkout-container">
+            <h1>No Order Details Found</h1>
+            <button onClick={() => navigate("/designs")}>Go Back</button>
+        </div>
+    );
+}
+
+const { design, color, size, measurements, description, orderDate } = orderData;
+
 
     const [showSettings, setShowSettings] = useState(false);
 
@@ -35,7 +47,7 @@ const Checkout = () => {
 
             <button className="confirm-btn" onClick={() => { 
                 alert("Order Placed!"); 
-                navigate("/orders");
+                navigate("/dashboard");
             }}>Confirm Order</button>
 
             {/* Settings Button */}

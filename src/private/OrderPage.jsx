@@ -1,20 +1,34 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import {Link, useNavigate, useParams } from "react-router-dom";
 import "../style/OrderPage.css";
 import gallery1 from "../assets/earwarmerpurple.jpg";
 import gallery2 from "../assets/Poncho.jpg";
 import gallery3 from "../assets/hat.jpeg";
 import gallery4 from "../assets/BabyHeadband.jpg";
+import gallery5 from "../assets/muffler.jpg";
+import gallery6 from "../assets/redwhitehat.jpg";
+import gallery7 from "../assets/socks.jpg";
+import gallery8 from "../assets/redhat.jpg";
+import gallery9 from "../assets/ErawarmerRed.jpg";
+import Logo from "../assets/Logo.png";
 
 const designs = {
-    1: { image: gallery1, name: "Ear Warmer", price: "$20" },
-    2: { image: gallery2, name: "Poncho", price: "$50" },
-    3: { image: gallery3, name: "Hat", price: "$15" },
-    4: { image: gallery4, name: "Baby Headband", price: "$10" },
+    1: { image: gallery1, name: "EarWarmer (Knitted/Crochet)", price: "Rs.300" },
+    2: { image: gallery2, name: "Poncho", price: "Rs.3000" },
+    3: { image: gallery3, name: "Tight-Fitting Topi", price: "Rs.850" },
+    4: { image: gallery4, name: "Baby Headband", price: "Rs.500" },
+    5: { image: gallery5, name: "Muffler (Knitted/Crochet)", price: "Rs.2000" },
+    6: { image: gallery6, name: "Soft Yarn Topi", price: "Rs.1500" },
+    7: { image: gallery7, name: "Socks (Knitted/Crochet)", price: "Rs.1000" },
+    8: { image: gallery8, name: "Loose-Fitting Topi", price: "950" },
+    9: { image: gallery9, name: "Baby Headband", price: "$10" }
 };
 
 const Order = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    
     const design = designs[parseInt(id)];
     if (!design) return <h1>Design Not Found</h1>;
 
@@ -29,6 +43,21 @@ const Order = () => {
 
     return (
         <div className="order-container">
+
+            <header className="navbar">
+                            <div className="logo">
+                                <Link to="/dashboard">
+                                    <img src={Logo} alt="Yarn Hues Logo" />
+                                </Link>
+                            </div>
+                            <nav className="nav-links">
+                                <Link to="/dashboard">Home</Link>
+                                <Link to="/designs">Shop</Link>
+                                <Link to="/aboutus">About</Link>
+                                <Link to="/contactus">Contact</Link>
+                            </nav>
+                        </header>
+
             <div className="order-details">
                 <img src={design.image} alt={design.name} className="order-image" />
                 <div className="order-info">
@@ -39,10 +68,10 @@ const Order = () => {
             </div>
             <div className="order-form">
                 <label>Color:</label>
-                <input type="text" value={color} onChange={(e) => setColor(e.target.value)} placeholder="Enter color" />
+                <input type="text" required value={color} onChange={(e) => setColor(e.target.value)} placeholder="Enter color" />
 
                 <label>Size:</label>
-                <input type="text" value={size} onChange={(e) => setSize(e.target.value)} placeholder="Enter size" />
+                <input type="text" required value={size} onChange={(e) => setSize(e.target.value)} placeholder="Enter size" />
 
                 <label>Measurements:</label>
                 <input type="text" value={measurements} onChange={(e) => setMeasurements(e.target.value)} placeholder="Enter measurements" />
@@ -59,7 +88,7 @@ const Order = () => {
                 <div className="order-buttons">
                     <button className="cart-btn" onClick={() => alert("Added to Cart!")}>Add to Cart</button>
                     <button className="fav-btn" onClick={() => setFavorite(!favorite)}>{favorite ? "❤️ Favorited" : "♡ Add to Favorites"}</button>
-                    <button className="checkout-btn" onClick={() => navigate("/checkout", { state: { design, color, size, measurements, description, orderDate } })}>
+                    <button className="checkout-btn" onClick={() => navigate("/checkoutpage", { state: { design, color, size, measurements, description, orderDate } })}>
                         Checkout
                     </button>
                 </div>

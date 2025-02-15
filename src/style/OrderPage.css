@@ -9,6 +9,43 @@
     align-items: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    opacity: 0.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+    transition: 0.3s;
+    gap:3px;
+}
+
+.nav-links a:hover {
+    color: #a45b4e;
+}
+
+
 /* Hero Section */
 .hero-section {
     width: 90%;

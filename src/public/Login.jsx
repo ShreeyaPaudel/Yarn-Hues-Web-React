@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Loginstyle.css"; // Import the CSS file
 
 const LoginPage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +17,7 @@ const LoginPage = () => {
         // Validate credentials
         if (username === storedEmail && password === storedPassword) {
             alert("Login successful!");
-            window.location.href = "Dashboard.html"; // Redirect to Dashboard
+            navigate("/dashboard"); // Redirect to Dashboard
         } else {
             alert("Invalid email or password. Please try again.");
         }

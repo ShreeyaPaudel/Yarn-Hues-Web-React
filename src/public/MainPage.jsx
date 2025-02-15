@@ -37,7 +37,7 @@ const MainPage = () => {
       {/* Authentication Section */}
       <div className="auth-section">
         <h2>Join the Yarn Hues Family</h2>
-        <p>Sign up to get exclusive offers, tutorials, and more.</p>
+        <p>Sign up to get exclusive offers,and more.</p>
         <div className="auth-buttons">
           <Link to="/login">
             <button className="auth-btn login-btn">Login</button>

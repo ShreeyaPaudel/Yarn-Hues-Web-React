@@ -16,6 +16,7 @@ body {
 .hero-section {
     background: url('../assets/1cb19aeee5531b607c5831f2dbc331d9.jpg') no-repeat center center/cover;
     height: 400px;
+    max-width: 2000px;
     display: flex;
     justify-content: center;
     align-items: center;
