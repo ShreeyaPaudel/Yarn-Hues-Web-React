@@ -60,16 +60,20 @@ const DesignsPage = () => {
             </div>
 
             {/* Settings Button */}
-            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>
-                ⚙️ Settings
-            </button>
 
+
+            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>⚙ Settings</button>
             {showSettings && (
                 <div className="settings-menu">
-                    <button className="settings-option">❤️ Favorites</button>
-                    <button className="settings-option">🚪 Logout</button>
+                    <ul>
+                        <li><a href="/cart">View Cart</a></li>
+                        <li><a href="/orders">Order History</a></li>
+                        <li><a href="/favorites">Favorites</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
                 </div>
             )}
+
 
             <footer className="footer">
                 <p>&copy; 2025 Yarn Hues. All Rights Reserved.</p>

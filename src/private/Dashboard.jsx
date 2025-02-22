@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
 import "../style/Dashboard.css";
 import gallery1 from "../assets/earwarmerpurple.jpg";
@@ -17,6 +17,10 @@ import yarnshop from "../assets/yarnshop.jpg"
 
 
 const Dashboard = () => {
+
+    const [showSettings, setShowSettings] = useState(false);
+
+
     return (
         <div className="dashboard-container">
             {/* Navbar */}
@@ -70,6 +74,18 @@ const Dashboard = () => {
             <section className="shopify-theme">
                 <img src={yarnshop} alt="Shopify Theme Preview" />
             </section>
+
+            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>⚙ Settings</button>
+            {showSettings && (
+                <div className="settings-menu">
+                    <ul>
+                        <li><a href="/cart">View Cart</a></li>
+                        <li><a href="/orders">Order History</a></li>
+                        <li><a href="/favorites">Favorites</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            )}
 
             {/* Footer */}
             <footer className="footer">

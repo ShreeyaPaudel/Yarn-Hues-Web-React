@@ -37,7 +37,7 @@
 
 .confirm-btn {
     padding: 10px 20px;
-    background-color: #008CBA;
+    background-color: rgb(120, 39, 39);
     color: white;
     font-size: 1rem;
     border-radius: 5px;
@@ -46,7 +46,7 @@
 }
 
 .confirm-btn:hover {
-    background-color: #005f73;
+    background-color: #731300;
 }
 
 .settings-btn {

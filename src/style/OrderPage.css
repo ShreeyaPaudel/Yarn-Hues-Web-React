@@ -42,7 +42,7 @@
 }
 
 .nav-links a:hover {
-    color: #a45b4e;
+    color: rgb(120, 39, 39);
 }
 
 
@@ -103,7 +103,7 @@
 .price {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #b6895b; /* Elegant gold shade */
+    color:rgb(120, 39, 39) ; /* Elegant gold shade */
     margin: 15px 0;
 }
 
@@ -176,14 +176,14 @@
 
 /* Cart Button */
 .cart-btn {
-    background-color: #b6895b;
+    background-color: rgb(120, 39, 39);
     color: white;
     margin-right: 10px;
     font-weight: bold;
 }
 
 .cart-btn:hover {
-    background-color: #8a6540;
+    background-color: #630303;
 }
 
 .checkout-btn {
@@ -195,19 +195,19 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    background-color: #b6895b;
+    background-color: rgb(120, 39, 39);
     color: white;
     margin-right: 10px;
     font-weight: bold;
 }
 .checkout-btn:hover {
-    background-color: #8a6540;
+    background-color: #630303;
 }
 
 /* Favorite Button */
 .fav-btn {
-    background-color: #f3e0c2;
-    color: #8a6540;
+    background-color: rgb(120, 39, 39);
+    color: white;
     font-weight: bold;
 }
 
@@ -228,8 +228,8 @@
     margin: 20px auto;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #333;
-    color: #fff;
+    /* background-color: rgb(120, 39, 39); */
+    color:black;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -237,7 +237,7 @@
 }
 
 .settings-btn:hover {
-    background-color: #555;
+    background-color: #e0d6d6;
 }
 
 .settings-menu {
@@ -264,7 +264,7 @@
 }
 
 
-/* ✅ RESPONSIVE DESIGN */
+
 @media (max-width: 1024px) {
     .order-details {
         grid-template-columns: 1fr; /* Stack on smaller screens */

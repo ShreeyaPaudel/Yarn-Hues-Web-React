@@ -13,7 +13,7 @@ import gallery9 from "../assets/ErawarmerRed.jpg";
 import Logo from "../assets/Logo.png";
 
 const designs = {
-    1: { image: gallery1, name: "EarWarmer (Knitted/Crochet)", price: "Rs.300" },
+    1: { image: gallery1, name: "Crochet Earwarmer", price: "Rs.400" },
     2: { image: gallery2, name: "Poncho", price: "Rs.3000" },
     3: { image: gallery3, name: "Tight-Fitting Topi", price: "Rs.850" },
     4: { image: gallery4, name: "Baby Headband", price: "Rs.500" },
@@ -21,7 +21,7 @@ const designs = {
     6: { image: gallery6, name: "Soft Yarn Topi", price: "Rs.1500" },
     7: { image: gallery7, name: "Socks (Knitted/Crochet)", price: "Rs.1000" },
     8: { image: gallery8, name: "Loose-Fitting Topi", price: "950" },
-    9: { image: gallery9, name: "Baby Headband", price: "$10" }
+    9: { image: gallery9, name: "Knitted Earwarmer", price: "Rs.400" },
 };
 
 const Order = () => {
