@@ -1,5 +1,5 @@
 import React, { useState } from "react"; 
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "../style/Dashboard.css";
 import gallery1 from "../assets/earwarmerpurple.jpg";
 import gallery2 from "../assets/Poncho.jpg";
@@ -17,6 +17,7 @@ import yarnshop from "../assets/yarnshop.jpg"
 
 
 const Dashboard = () => {
+    const navigate = useNavigate();
 
     const [showSettings, setShowSettings] = useState(false);
 
@@ -75,17 +76,9 @@ const Dashboard = () => {
                 <img src={yarnshop} alt="Shopify Theme Preview" />
             </section>
 
-            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>⚙ Settings</button>
-            {showSettings && (
-                <div className="settings-menu">
-                    <ul>
-                        <li><a href="/cart">View Cart</a></li>
-                        <li><a href="/orders">Order History</a></li>
-                        <li><a href="/favorites">Favorites</a></li>
-                        <li><a href="/logout">Logout</a></li>
-                    </ul>
-                </div>
-            )}
+            <button className="settings-btn" onClick={() => navigate("/lastpage")}>⚙ Settings</button>
+            
+           
 
             {/* Footer */}
             <footer className="footer">

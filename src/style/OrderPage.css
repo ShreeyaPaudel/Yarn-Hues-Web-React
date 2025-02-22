@@ -224,45 +224,42 @@
 }
 
 .settings-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 15px;
-    font-size: 16px;
-    /* background-color: rgb(120, 39, 39); */
-    color:black;
+    background: none;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    font-size: 1.2rem;
     transition: 0.3s;
+    
+    /* Center the button */
+    display: block;
+    margin: 20px auto; /* Centers horizontally */
+    
+    /* Optional styling */
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #333;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-btn {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
 
 .settings-btn:hover {
-    background-color: #e0d6d6;
-}
-
-.settings-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.settings-option {
-    width: 150px;
-    padding: 8px;
-    margin: 5px;
-    font-size: 14px;
-    background-color: #eee;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    background-color: rgb(221, 214, 214);
     transition: 0.3s;
 }
-
-.settings-option:hover {
-    background-color: #ddd;
-}
-
 
 
 @media (max-width: 1024px) {

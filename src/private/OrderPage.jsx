@@ -95,17 +95,7 @@ const Order = () => {
             </div>
 
             {/* Settings Button */}
-            <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>⚙ Settings</button>
-            {showSettings && (
-                <div className="settings-menu">
-                    <ul>
-                        <li><a href="/cart">View Cart</a></li>
-                        <li><a href="/orders">Order History</a></li>
-                        <li><a href="/favorites">Favorites</a></li>
-                        <li><a href="/logout">Logout</a></li>
-                    </ul>
-                </div>
-            )}
+            <button className="settings-btn" onClick={() => navigate("/lastpage")}>⚙ Settings</button>
 
             <footer className="footer">
                 <p>&copy; 2025 Yarn Hues. All Rights Reserved.</p>
