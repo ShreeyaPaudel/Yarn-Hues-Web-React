@@ -13,23 +13,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 3%; 
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap; 
 }
 
 .logo img {
-    height: 50px;
+    height: 55px;
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow links to wrap if necessary */
+    justify-content: flex-end; /* Ensure items are aligned to the right */
+    margin-right: 10px;
 }
 
 .nav-links a {
@@ -37,14 +41,14 @@
     color: #121212;
     font-weight: bold;
     font-family: 'Times New Roman', serif;
+    font-size: 16px;
     transition: 0.3s;
-    gap:3px;
+    
 }
 
 .nav-links a:hover {
     color: rgb(120, 39, 39);
 }
-
 
 /* Hero Section */
 .hero-section {
@@ -134,6 +138,7 @@
     color: #333;
     display: block;
     margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Input Fields */
@@ -146,6 +151,7 @@
     border: 1px solid #ddd;
     border-radius: 6px;
     background: #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Two-column Form Layout */

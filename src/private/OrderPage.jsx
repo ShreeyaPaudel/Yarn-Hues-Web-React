@@ -33,6 +33,7 @@ const Order = () => {
     if (!design) return <h1>Design Not Found</h1>;
 
     const [color, setColor] = useState("");
+    const [pattern, setPattern] = useState('');
     const [size, setSize] = useState("");
     const [measurements, setMeasurements] = useState("");
     const [description, setDescription] = useState("");
@@ -63,25 +64,31 @@ const Order = () => {
                 <div className="order-info">
                     <h1>{design.name}</h1>
                     <p className="price">{design.price}</p>
-                    <p className="description">Beautifully handcrafted {design.name} perfect for any occasion.</p>
+                    <p className="description">Beautifully handcrafted {design.name} perfect and comfortable for you.</p>
                 </div>
             </div>
             <div className="order-form">
                 <label>Color:</label>
                 <input type="text" required value={color} onChange={(e) => setColor(e.target.value)} placeholder="Enter color" />
 
+                <label>Pattern (crochet/knitted):</label>
+                <input type="text" required value={pattern} onChange={(e) => setPattern(e.target.value)} placeholder="Enter pattern" />
+
                 <label>Size:</label>
                 <input type="text" required value={size} onChange={(e) => setSize(e.target.value)} placeholder="Enter size" />
 
                 <label>Measurements:</label>
-                <input type="text" value={measurements} onChange={(e) => setMeasurements(e.target.value)} placeholder="Enter measurements" />
+                <input type="text" value={measurements} onChange={(e) => setMeasurements(e.target.value)} placeholder="Enter measurements: length, width and other necessary measuremts according to the item selected" />
+
+                <label>Address:</label>
+                <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter Address in detail" />
+
 
                 <label>Order Description:</label>
-                <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Describe any customizations"></textarea>
+                <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Describe any customizations you want in detail"></textarea>
 
-                <label>Order Date:</label>
-                <input type="date" value={orderDate} onChange={(e) => setOrderDate(e.target.value)} />
 
+        
                 <label>Payment Option:</label>
                 <input type="text" value="Cash on Delivery" readOnly />
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/LastPage.css";
 import Logo from "../assets/Logo.png";
+import { FaShoppingCart, FaHistory, FaHeart, FaSignOutAlt } from "react-icons/fa";
 
 const LastPage = () => {
     const [activeModal, setActiveModal] = useState(null);
@@ -28,10 +29,18 @@ const LastPage = () => {
 
             {/* Buttons */}
             <div className="button-container">
-                <button onClick={() => openModal("cart")}>View Cart</button>
-                <button onClick={() => openModal("orderHistory")}>Order History</button>
-                <button onClick={() => openModal("favorites")}>Favorites</button>
-                <button onClick={() => openModal("settings")}>Settings</button>
+                <button onClick={() => openModal("cart")}>
+                    <FaShoppingCart /> View Cart
+                </button>
+                <button onClick={() => openModal("orderHistory")}>
+                    <FaHistory /> Order History
+                </button>
+                <button onClick={() => openModal("favorites")}>
+                    <FaHeart /> Favorites
+                </button>
+                <button onClick={() => openModal("settings")}>
+                    <FaSignOutAlt /> Settings
+                </button>
             </div>
 
             {/* Modals */}
@@ -39,7 +48,7 @@ const LastPage = () => {
                 <div className="modal">
                     <div className="modal-content cart">
                         <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2>Your Cart</h2>
+                        <h2><FaShoppingCart /> Your Cart</h2>
                         <p>Cart items will be displayed here.</p>
                     </div>
                 </div>
@@ -49,7 +58,7 @@ const LastPage = () => {
                 <div className="modal">
                     <div className="modal-content order-history">
                         <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2>Order History</h2>
+                        <h2><FaHistory /> Order History</h2>
                         <p>Your previous orders appear here.</p>
                     </div>
                 </div>
@@ -59,22 +68,22 @@ const LastPage = () => {
                 <div className="modal">
                     <div className="modal-content favorites">
                         <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2>Favorites</h2>
+                        <h2><FaHeart /> Favorites</h2>
                         <p>Saved items will be listed here.</p>
                     </div>
                 </div>
             )}
 
-            {activeModal === "settings" && (
+            {activeModal === "Logout" && (
                 <div className="modal">
                     <div className="modal-content settings">
                         <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2>Settings</h2>
+                        <h2><FaSignOutAlt /> Settings</h2>
                         <ul>
-                            <li><a href="/cart">View Cart</a></li>
-                            <li><a href="/orders">Order History</a></li>
-                            <li><a href="/favorites">Favorites</a></li>
-                            <li><a href="/logout">Logout</a></li>
+                            <li><FaShoppingCart /> <a href="/cart">View Cart</a></li>
+                            <li><FaHistory /> <a href="/orders">Order History</a></li>
+                            <li><FaHeart /> <a href="/favorites">Favorites</a></li>
+                            <li><FaSignOutAlt /> <a href="/logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>

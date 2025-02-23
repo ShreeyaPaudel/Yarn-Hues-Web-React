@@ -1,6 +1,6 @@
 /* Overall page styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
@@ -52,20 +52,23 @@ body {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Buttons */
 button {
+    max-width: fit-content;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #bc0649;
+    background-color: rgb(120, 39, 39);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 button:hover {
-    background-color: #c33170;
+    background-color: rgb(74, 18, 18);
 }

@@ -40,6 +40,7 @@ const ProfilePage = () => {
         localStorage.setItem("email", email);
         localStorage.setItem("address", address);
         alert("Profile updated successfully!");
+        navigate("/dashboard"); 
     };
 
     // Navigate back

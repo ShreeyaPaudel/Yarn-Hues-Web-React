@@ -34,6 +34,7 @@ const Dashboard = () => {
                     <Link to="/designs">Shop</Link>
                     <Link to="/aboutus">About</Link>
                     <Link to="/contactus">Contact</Link>
+                    <Link to= "/editprofile">Profile</Link>
                 </nav>
             </header>
 

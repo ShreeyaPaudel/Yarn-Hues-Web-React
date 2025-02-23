@@ -8,14 +8,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 3%; 
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap; 
 }
 
 .logo img {
@@ -24,16 +25,21 @@
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow links to wrap if necessary */
+    justify-content: flex-end; /* Ensure items are aligned to the right */
+    margin-right: 75px;
 }
+
 
 .nav-links a {
     text-decoration: none;
     color: #121212;
     font-weight: bold;
     font-family: 'Times New Roman', serif;
+    font-size: 16px;
     transition: 0.3s;
-    gap:3px;
+    
 }
 
 .nav-links a:hover {
