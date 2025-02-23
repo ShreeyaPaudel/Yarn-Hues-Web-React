@@ -32,7 +32,7 @@ const AboutUs = () => {
             intuitive online platform and vibrant color themes, shopping for yarn
             has never been easier!
           </p>
-          <Link to="/contact-us">
+          <Link to="/login">
             <button className="learn-more-btn">Discover More</button>
           </Link>
         </div>

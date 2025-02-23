@@ -36,6 +36,7 @@ const Order = () => {
     const [pattern, setPattern] = useState('');
     const [size, setSize] = useState("");
     const [measurements, setMeasurements] = useState("");
+    const [address, setAddress] = useState("");
     const [description, setDescription] = useState("");
     const [orderDate, setOrderDate] = useState("");
     const [favorite, setFavorite] = useState(false);
@@ -75,7 +76,7 @@ const Order = () => {
                 <input type="text" required value={pattern} onChange={(e) => setPattern(e.target.value)} placeholder="Enter pattern" />
 
                 <label>Size:</label>
-                <input type="text" required value={size} onChange={(e) => setSize(e.target.value)} placeholder="Enter size" />
+                <input type="text" required value={size} onChange={(e) => setSize(e.target.value)} placeholder="Enter size/Describe your body dimensions" />
 
                 <label>Measurements:</label>
                 <input type="text" value={measurements} onChange={(e) => setMeasurements(e.target.value)} placeholder="Enter measurements: length, width and other necessary measuremts according to the item selected" />

@@ -52,7 +52,7 @@ body {
 .hero-section {
     text-align: center;
     background: url("../assets/coloourfulyarn.jpg") no-repeat center/cover;
-    color: #fff;
+    color: rgb(106, 36, 36);
     padding: 120px 20px;
 }
 

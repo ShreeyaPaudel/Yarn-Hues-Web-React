@@ -1,46 +1,54 @@
+/* Modal Container */
 .modals-container {
     text-align: center;
     padding: 20px;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 3%;
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap;  /* Ensures the navbar wraps to a new line if necessary */
 }
 
+/* Logo */
 .logo img {
-    height: 50px;
+    height: 55px;
 }
 
+/* Navbar Links */
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;  /* Allow links to wrap if needed */
+    justify-content: flex-end;
+    margin-right: 80px;
 }
 
+/* Navbar Links Styling */
 .nav-links a {
     text-decoration: none;
     color: #121212;
     font-weight: bold;
     font-family: 'Times New Roman', serif;
+    font-size: 16px;
     transition: 0.3s;
-    gap:3px;
 }
 
 .nav-links a:hover {
     color: rgb(120, 39, 39);
 }
 
-
-/* Button Styling */
+/* Button Container */
 .button-container {
     margin-top: 70px;
     display: flex;
@@ -49,8 +57,9 @@
     margin: 20px 0;
 }
 
+/* Button Styling */
 .button-container button {
-    margin-top: 70px;
+    margin-top: 100px;
     padding: 20px 35px;
     font-size: 20px;
     cursor: pointer;
@@ -126,7 +135,6 @@
     color: black;
     padding: 10px;
     margin-top: 360px;
-    
 }
 
 /* Animation */
@@ -138,5 +146,74 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .navbar {
+        padding: 15px 2%;
+    }
+
+   
+    .nav-links {
+        justify-content: flex-start;
+        margin-right: 50px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    
+    .button-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button-container button {
+        margin-top: 50px;
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+   
+    .modal-content {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 2%;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .button-container button {
+        margin-top: 15px;
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .footer {
+        margin-top: 250px;
     }
 }
