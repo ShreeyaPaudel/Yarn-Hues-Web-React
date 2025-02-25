@@ -78,7 +78,7 @@ const LastPage = () => {
                 <div className="modal">
                     <div className="modal-content settings">
                         <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2><FaSignOutAlt /> Settings</h2>
+                        <h2><FaSignOutAlt /> Logout</h2>
                         <ul>
                             <li><FaShoppingCart /> <a href="/cart">View Cart</a></li>
                             <li><FaHistory /> <a href="/orders">Order History</a></li>
