@@ -39,7 +39,7 @@ const LastPage = () => {
                     <FaHeart /> Favorites
                 </button>
                 <button onClick={() => openModal("settings")}>
-                    <FaSignOutAlt /> Settings
+                    <FaSignOutAlt /> Logout
                 </button>
             </div>
 
