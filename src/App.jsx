@@ -20,6 +20,11 @@ function App() {
   const CheckoutPage = React.lazy (() => import ("./private/CheckoutPage"));
   const LastPage = React.lazy (() => import ("./private/LastPage"));
 
+  const AdminDashboard = React.lazy (( ) => import ("./admin/AdminDashboard"));
+  const AdminOrders = React.lazy (( ) => import ("./admin/AdminOrders"));
+  const AdminProducts = React.lazy (( ) => import ("./admin/AdminProducts"));
+  
+
  
   return (
     <Router>
@@ -37,6 +42,12 @@ function App() {
         <Route path = '/order/:id' element = {<OrderPage/>}></Route>
         <Route path = '/checkoutpage' element = {<CheckoutPage/>}></Route>
         <Route path = '/lastpage' element = {<LastPage/>}></Route>
+
+        <Route path = '/admindashboard' element = {<AdminDashboard/>}></Route>
+        <Route path = '/adminorders' element = {<AdminOrders/>}></Route>
+        <Route path = '/adminProducts' element = {<AdminProducts/>}></Route>
+        
+       
         
        </Routes>
       </Suspense>
