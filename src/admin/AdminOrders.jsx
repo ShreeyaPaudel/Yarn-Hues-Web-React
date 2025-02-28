@@ -24,6 +24,7 @@ const AdminOrders = () => {
   }, []);
 
   return (
+    <div className='products-container'>
     <div>
       <h1>Admin Orders</h1>
       <table border="1">
@@ -52,6 +53,7 @@ const AdminOrders = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

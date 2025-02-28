@@ -1,51 +1,72 @@
-/* Admin Panel Styles */
+/* General Page Styles */
 .admin-products {
     text-align: center;
     padding: 20px;
+    font-family: "Times New Roman", serif;
+    background-image: url("../assets/crochet.jpg"); /* Make sure the path is correct */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
 /* Add Product Button */
 .add-btn {
-    background: #28a745;
+    background: #512313;  /* Matching your requested color */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .add-btn:hover {
-    background: #218838;
+    background: #814b3d;  /* Slightly lighter shade for hover effect */
 }
 
 /* Product Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
+/* Table Headers */
 th {
-    background: #007bff;
+    background: #512313;
     color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Table Rows */
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
 }
 
 /* Buttons */
+.edit-btn, .delete-btn, .save-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
 .edit-btn {
     background: #ffc107;
     color: black;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .edit-btn:hover {
@@ -55,22 +76,29 @@ th {
 .delete-btn {
     background: #dc3545;
     color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .delete-btn:hover {
     background: #c82333;
 }
 
+/* Save Button */
+.save-btn {
+    background: #512313;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #814b3d;
+}
+
 /* Product Image */
 .product-img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal Styling */
@@ -87,48 +115,42 @@ th {
 }
 
 .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
-    width: 400px;
+    width: 420px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Close Button */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
+    color: #512313;
+    font-weight: bold;
 }
 
+/* Input Fields */
 input, textarea {
     width: 90%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin: 12px 0;
     border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.save-btn {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 8px;
     font-size: 16px;
-}
-
-.save-btn:hover {
-    background: #0056b3;
+    font-family: "Times New Roman", serif;
 }
 
 /* Image Preview */
 .preview-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
