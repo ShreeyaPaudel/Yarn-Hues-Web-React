@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './AdminOrders.css';
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
+  const navigate = useNavigate(); // Initialize navigation
 
   // Fetch orders (Replace with a real API call)
   useEffect(() => {
@@ -13,8 +15,8 @@ const AdminOrders = () => {
           { id: 1, customer: 'Shreeya', status: 'Pending', total: '$50' },
           { id: 2, customer: 'Samikshya', status: 'Shipped', total: '$75' },
           { id: 3, customer: 'Sita', status: 'Delivered', total: '$120' },
-          { id: 1, customer: 'Ram', status: 'Pending', total: '$50' },
-          { id: 1, customer: 'Shyam', status: 'Pending', total: '$50' },
+          { id: 4, customer: 'Ram', status: 'Pending', total: '$50' },
+          { id: 5, customer: 'Shyam', status: 'Pending', total: '$50' },
         ];
         setOrders(response);
       } catch (error) {
@@ -46,6 +48,10 @@ const AdminOrders = () => {
     <div className="admin-orders">
       <div className="translucent-container">
         <h1>Admin Orders</h1>
+
+        {/* Back Button */}
+        <button className="back-btn" onClick={() => navigate('/admindashboard')}>⬅ Back to Dashboard</button>
+
         <table>
           <thead>
             <tr>

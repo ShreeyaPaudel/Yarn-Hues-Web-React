@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./AdminProducts.css"; // Add CSS file for styling
 
 const AdminProducts = () => {
@@ -12,6 +13,7 @@ const AdminProducts = () => {
     image: null,
   });
   const [editingProductId, setEditingProductId] = useState(null); // To track which product is being edited
+  const navigate = useNavigate(); // Initialize navigation
 
   // Fetch products (Replace with real API call)
   useEffect(() => {
@@ -89,7 +91,12 @@ const AdminProducts = () => {
     <div className="admin-products">
       <div className="translucent-container">
         <h1>Admin Products</h1>
+
+        {/* Back Button */}
         <button className="add-btn" onClick={() => setShowModal(true)}>Add Product</button>
+        
+
+       
   
         <table>
           <thead>
@@ -139,6 +146,9 @@ const AdminProducts = () => {
             </div>
           </div>
         )}
+ 
+ <button className="back-btn" onClick={() => navigate('/admindashboard')}>⬅ Back to Dashboard</button>
+
       </div>
     </div>
   );

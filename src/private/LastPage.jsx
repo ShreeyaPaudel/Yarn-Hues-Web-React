@@ -1,13 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import "../style/LastPage.css";
 import Logo from "../assets/Logo.png";
+import SampleProduct from "../assets/earwarmerpurple.jpg"; // Sample product image
 import { FaShoppingCart, FaHistory, FaHeart, FaSignOutAlt } from "react-icons/fa";
 
 const LastPage = () => {
     const [activeModal, setActiveModal] = useState(null);
+    const navigate = useNavigate(); // Hook for navigation
 
-    const openModal = (modal) => setActiveModal(modal);
+    const openModal = (modal) => {
+        if (modal === "logout") {
+            navigate("/"); // Redirect to the main page
+        } else {
+            setActiveModal(modal);
+        }
+    };
+
     const closeModal = () => setActiveModal(null);
 
     return (
@@ -38,7 +47,7 @@ const LastPage = () => {
                 <button onClick={() => openModal("favorites")}>
                     <FaHeart /> Favorites
                 </button>
-                <button onClick={() => openModal("settings")}>
+                <button onClick={() => openModal("logout")}>
                     <FaSignOutAlt /> Logout
                 </button>
             </div>
@@ -49,7 +58,18 @@ const LastPage = () => {
                     <div className="modal-content cart">
                         <span className="close-btn" onClick={closeModal}>X</span>
                         <h2><FaShoppingCart /> Your Cart</h2>
-                        <p>Cart items will be displayed here.</p>
+
+                        {/* Sample Cart Product */}
+                        <div className="cart-item">
+                            <img src={SampleProduct} alt="Product" className="cart-img" />
+                            <div className="cart-details">
+                                <p><strong>Product Name:</strong> Crochet Earwarmer</p>
+                                <p><strong>Price:</strong> Rs.400</p>
+                                <p><strong>Quantity:</strong> 2</p>
+                                <p><strong>Order Decription:</strong> March 20, 2025</p>
+                                <p><strong>Address:</strong> Bhaisepati,Lalitpur</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
@@ -69,22 +89,15 @@ const LastPage = () => {
                     <div className="modal-content favorites">
                         <span className="close-btn" onClick={closeModal}>X</span>
                         <h2><FaHeart /> Favorites</h2>
-                        <p>Saved items will be listed here.</p>
-                    </div>
-                </div>
-            )}
 
-            {activeModal === "Logout" && (
-                <div className="modal">
-                    <div className="modal-content settings">
-                        <span className="close-btn" onClick={closeModal}>X</span>
-                        <h2><FaSignOutAlt /> Logout</h2>
-                        <ul>
-                            <li><FaShoppingCart /> <a href="/cart">View Cart</a></li>
-                            <li><FaHistory /> <a href="/orders">Order History</a></li>
-                            <li><FaHeart /> <a href="/favorites">Favorites</a></li>
-                            <li><FaSignOutAlt /> <a href="/logout">Logout</a></li>
-                        </ul>
+                        {/* Sample Favorite Product */}
+                        <div className="favorite-item">
+                            <img src={SampleProduct} alt="Product" className="favorite-img" />
+                            <div className="favorite-details">
+                                <p><strong>Product Name:</strong> Crochet Earwarmer</p>
+                                <p><strong>Price:</strong> Rs.400</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

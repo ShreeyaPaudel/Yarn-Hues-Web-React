@@ -25,6 +25,7 @@
 
 /* Add Button */
 .add-btn {
+    
     background: #512313;
     color: white;
     padding: 12px 20px;
@@ -192,3 +193,22 @@ input, textarea {
         transform: scale(1);
     }
 }
+
+.back-btn {
+    background: #512313;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "Times New Roman", serif;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  
+  .back-btn:hover {
+    background: #814b3d;
+  }
+  

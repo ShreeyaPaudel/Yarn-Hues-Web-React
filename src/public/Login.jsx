@@ -56,6 +56,12 @@ const LoginPage = () => {
                             <a href="PasswordRecovery.html">Click Here</a>
                         </p>
 
+                        {/* Added "Login as Admin" below "Forgot Password?" */}
+                        <p>
+                            To Login as Admin,{" "}
+                            <a href="/adminlogin">Click Here</a>
+                        </p>
+
                         <button type="submit" className="btnL">Login</button>
 
                         <p>

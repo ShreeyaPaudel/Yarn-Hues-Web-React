@@ -69,6 +69,7 @@ nav ul li a:hover {
 .dashboard-container nav ul li a {
     display: inline-block;
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: bold;
