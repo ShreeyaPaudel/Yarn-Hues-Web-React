@@ -1,52 +1,94 @@
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-/* Dashboard Container */
-div {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* General Admin Orders Page */
+.admin-orders {
     text-align: center;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+    background-image: url("../assets/crochet.jpg"); /* Adjust the image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Header Styling */
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+/* Translucent Effect Container */
+.translucent-container {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 1000px;
 }
 
-/* Navigation Styling */
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: "Times New Roman", serif;
 }
 
-nav ul li {
-    margin: 10px 0;
-}
-
-/* Link Styling */
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    background: #007BFF;
+/* Table Headers */
+th {
+    background: #512313;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background: #0056b3;
+/* Table Rows */
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
 }
-div{
-    opacity:0.10%;
+
+/* Buttons */
+.edit-btn, .delete-btn, .save-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: hsl(13, 15%, 50%);
+    color: black;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background: #856868;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: hsl(13, 15%, 50%);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: hsl(14, 15%, 44%);
+}
+
+/* Save Button */
+.save-btn {
+    background: #512313;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #814b3d;
 }
