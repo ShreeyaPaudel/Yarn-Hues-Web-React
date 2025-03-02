@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./AdminPanel.css";
+// import "./AdminOrders.css";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);

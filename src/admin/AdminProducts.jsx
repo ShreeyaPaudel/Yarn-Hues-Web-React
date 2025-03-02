@@ -87,86 +87,61 @@ const AdminProducts = () => {
 
   return (
     <div className="admin-products">
-      <h1>Admin Products</h1>
-      <button className="add-btn" onClick={() => setShowModal(true)}>Add Product</button>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Product ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Description</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product) => (
-            <tr key={product.id}>
-              <td>{product.image && <img src={product.image} alt={product.name} className="product-img" />}</td>
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.price}</td>
-              <td>{product.stock}</td>
-              <td>{product.description}</td>
-              <td>
-                <button className="edit-btn" onClick={() => openEditModal(product)}>Edit</button>
-                <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
-              </td>
+      <div className="translucent-container">
+        <h1>Admin Products</h1>
+        <button className="add-btn" onClick={() => setShowModal(true)}>Add Product</button>
+  
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Description</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Modal for adding/editing product */}
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close-btn" onClick={() => setShowModal(false)}>&times;</span>
-            <h2>{editingProductId ? "Edit Product" : "Add New Product"}</h2>
-            <input
-              type="text"
-              name="name"
-              placeholder="Product Name"
-              value={newProduct.name}
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="text"
-              name="price"
-              placeholder="Price"
-              value={newProduct.price}
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="number"
-              name="stock"
-              placeholder="Stock Quantity"
-              value={newProduct.stock}
-              onChange={handleInputChange}
-              required
-            />
-            <textarea
-              name="description"
-              placeholder="Product Description"
-              value={newProduct.description}
-              onChange={handleInputChange}
-              required
-            ></textarea>
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
-            {newProduct.image && <img src={newProduct.image} alt="Preview" className="preview-img" />}
-            <button className="save-btn" onClick={editingProductId ? editProduct : addProduct}>
-              {editingProductId ? "Save Changes" : "Save Product"}
-            </button>
+          </thead>
+          <tbody>
+            {products.map((product) => (
+              <tr key={product.id}>
+                <td>{product.image && <img src={product.image} alt={product.name} className="product-img" />}</td>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>{product.stock}</td>
+                <td>{product.description}</td>
+                <td>
+                  <button className="edit-btn" onClick={() => openEditModal(product)}>Edit</button>
+                  <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+  
+        {/* Modal for Adding/Editing Product */}
+        {showModal && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close-btn" onClick={() => setShowModal(false)}>&times;</span>
+              <h2>{editingProductId ? "Edit Product" : "Add New Product"}</h2>
+              <input type="text" name="name" placeholder="Product Name" value={newProduct.name} onChange={handleInputChange} required />
+              <input type="text" name="price" placeholder="Price" value={newProduct.price} onChange={handleInputChange} required />
+              <input type="number" name="stock" placeholder="Stock Quantity" value={newProduct.stock} onChange={handleInputChange} required />
+              <textarea name="description" placeholder="Product Description" value={newProduct.description} onChange={handleInputChange} required></textarea>
+              <input type="file" accept="image/*" onChange={handleImageUpload} />
+              {newProduct.image && <img src={newProduct.image} alt="Preview" className="preview-img" />}
+              <button className="save-btn" onClick={editingProductId ? editProduct : addProduct}>
+                {editingProductId ? "Save Changes" : "Save Product"}
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
-};
-
+}
+  
 export default AdminProducts;
