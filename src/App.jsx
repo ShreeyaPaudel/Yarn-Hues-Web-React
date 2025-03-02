@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import AdminLogin from './admin/AdminLogin';
 
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
         <Route path = '/order/:id' element = {<OrderPage/>}></Route>
         <Route path = '/checkoutpage' element = {<CheckoutPage/>}></Route>
         <Route path = '/lastpage' element = {<LastPage/>}></Route>
-
+        
+        <Route path ='/adminlogin' element ={<AdminLogin/>}></Route>
         <Route path = '/admindashboard' element = {<AdminDashboard/>}></Route>
         <Route path = '/adminorders' element = {<AdminOrders/>}></Route>
         <Route path = '/adminProducts' element = {<AdminProducts/>}></Route>
