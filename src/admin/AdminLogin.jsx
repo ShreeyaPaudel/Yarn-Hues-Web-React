@@ -11,7 +11,7 @@ const AdminLogin = () => {
     // Check if admin is already logged in
     const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
     if (isAdminLoggedIn === "true") {
-      navigate("/admin-dashboard"); // Redirect to Admin Dashboard
+      navigate("/admindashboard"); // Redirect to Admin Dashboard
     }
   }, [navigate]);
 

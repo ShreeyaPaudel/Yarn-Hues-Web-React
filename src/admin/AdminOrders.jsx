@@ -12,11 +12,11 @@ const AdminOrders = () => {
       try {
         // Simulated orders (Replace with API call)
         const response = [
-          { id: 1, customer: 'Shreeya', status: 'Pending', total: '$50' },
-          { id: 2, customer: 'Samikshya', status: 'Shipped', total: '$75' },
-          { id: 3, customer: 'Sita', status: 'Delivered', total: '$120' },
-          { id: 4, customer: 'Ram', status: 'Pending', total: '$50' },
-          { id: 5, customer: 'Shyam', status: 'Pending', total: '$50' },
+          { id: 1, customer: 'Shreeya', status: 'Pending', total: 'Rs.2550' },
+          { id: 2, customer: 'Samikshya', status: 'Shipped', total: 'Rs750' },
+          { id: 3, customer: 'Sita', status: 'Delivered', total: 'Rs4000' },
+          { id: 4, customer: 'Ram', status: 'Pending', total: 'Rs500' },
+          { id: 5, customer: 'Shyam', status: 'Pending', total: 'Rs3000' },
         ];
         setOrders(response);
       } catch (error) {

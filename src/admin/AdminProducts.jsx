@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./AdminProducts.css"; // Add CSS file for styling
+import gallery11 from "../assets/EarwarmerGrey.jpg";
+import gallery1 from "../assets/earwarmerpurple.jpg";
+import gallery2 from "../assets/Poncho.jpg";
+import gallery3 from "../assets/hat.jpeg";
+import gallery4 from "../assets/BabyHeadband.jpg";
+import gallery5 from "../assets/muffler.jpg";
+import gallery6 from "../assets/redwhitehat.jpg";
+import gallery7 from "../assets/socks.jpg";
+import gallery8 from "../assets/redhat.jpg";
+import gallery9 from "../assets/ErawarmerRed.jpg";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState([]);
@@ -20,9 +30,19 @@ const AdminProducts = () => {
     const fetchProducts = async () => {
       try {
         const response = [
-          { id: 1, name: "Wool Yarn", price: "$10", stock: 50, description: "Soft wool yarn", image: null },
-          { id: 2, name: "Cotton Yarn", price: "$8", stock: 30, description: "Durable cotton yarn", image: null },
-          { id: 3, name: "Silk Yarn", price: "$15", stock: 20, description: "Luxury silk yarn", image: null },
+          { id: 1, name: "Knitted Earwarmer", price: "Rs.400", stock: 13, description: "Beautifully handcrafted Knitted Earwarmer perfect and comfortable for you.", image: gallery9 },
+          { id: 2, name: "Crochet Earwarmer", price: "Rs.400", stock: 15, description: "eautifully handcrafted Crochet Earwarmer perfect and comfortable for you.", image: gallery1 },
+          { id: 3, name: "Poncho", price: "Rs.3000", stock: 3, description: "Beautifully handcrafted Poncho perfect and comfortable for you.", image: gallery2 },
+          { id: 4, name: "Tight-Fitting Topi", price: "Rs.850", stock: 20, description: "Beautifully handcrafted Tight-Fitting Topi perfect and comfortable for you.", image: gallery3 },
+          { id: 5, name: "Baby Headband", price: "Rs.500", stock: 10, description: "Beautifully handcrafted Baby Headband perfect and comfortable for you.", image: gallery4 },
+          { id: 6, name: "Muffler (Knitted/Crochet)", price: "Rs.2000", stock: 6, description: "Beautifully handcrafted Muffler (Knitted/Crochet) perfect and comfortable for you.", image: gallery5 },
+          { id: 7, name: "Soft Yarn Topi", price: "Rs.1500", stock: 8, description: "Beautifully handcrafted Soft Yarn Topi perfect and comfortable for you.", image: gallery6 },
+          { id: 8, name: "Loose-Fitting Topi", price: "Rs.950", stock: 2, description: "Beautifully handcrafted Loose-Fitting Topi perfect and comfortable for you.", image: gallery8 },
+          { id: 9, name: "Thick Yarn Earwarmer", price: "Rs.400", stock: 15, description: "Beautifully handcrafted Crochet Earwarmer perfect and comfortable for you.", image: gallery11 },
+         
+      
+          
+          
         ];
         setProducts(response);
       } catch (error) {

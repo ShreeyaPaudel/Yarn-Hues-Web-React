@@ -20,7 +20,7 @@ const designs = {
     5: { image: gallery5, name: "Muffler (Knitted/Crochet)", price: "Rs.2000" },
     6: { image: gallery6, name: "Soft Yarn Topi", price: "Rs.1500" },
     7: { image: gallery7, name: "Socks (Knitted/Crochet)", price: "Rs.1000" },
-    8: { image: gallery8, name: "Loose-Fitting Topi", price: "950" },
+    8: { image: gallery8, name: "Loose-Fitting Topi", price: "Rs.950" },
     9: { image: gallery9, name: "Knitted Earwarmer", price: "Rs.400" },
 };
 

@@ -67,7 +67,7 @@ const LastPage = () => {
                                 <p><strong>Price:</strong> Rs.400</p>
                                 <p><strong>Quantity:</strong> 2</p>
                                 <p><strong>Order Decription:</strong> March 20, 2025</p>
-                                <p><strong>Address:</strong> Bhaisepati,Lalitpur</p>
+                                <p><strong>Address:</strong> Bhaisepati,Lalitpu</p>
                             </div>
                         </div>
                     </div>
